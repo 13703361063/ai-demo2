@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+}
+
+.theme-dark {
+  background-color: #050509;
+  color: #e5e7eb;
+}
+
+.theme-dark .bg-chat-bg {
+  background-color: #050509;
+}
+
+.theme-dark .bg-chat-sidebar {
+  background-color: #0f172a;
+}
+
+.theme-dark .bg-chat-message-assistant {
+  background-color: #020617;
+}
+
+.theme-dark .bg-chat-message-user {
+  background-color: #0f766e;
+}
+
+.theme-light {
+  background-color: #f9fafb;
+  color: #020617;
+}
+
+.theme-light .bg-chat-bg {
+  background-color: #f9fafb;
+}
+
+.theme-light .bg-chat-sidebar {
+  background-color: #e5e7eb;
+}
+
+.theme-light .bg-chat-message-assistant {
+  background-color: #ffffff;
+}
+
+.theme-light .bg-chat-message-user {
+  background-color: #16a34a;
+}
+
+
