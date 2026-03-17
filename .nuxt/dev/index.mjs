@@ -658,7 +658,7 @@ const _inlineRuntimeConfig = {
   "dashscopeModel": "qwen-plus",
   "maxInputChars": 12000,
   "rateLimitPerIpPerMin": 30,
-  "databaseUrl": "file:./prisma/dev.db"
+  "databaseUrl": "postgres://postgres.hedvegnbcriepjnfayjx:CCGtLznRuPjyYmFU@aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true"
 };
 const envOptions = {
   prefix: "NITRO_",
