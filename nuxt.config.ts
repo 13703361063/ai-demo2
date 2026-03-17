@@ -17,7 +17,6 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    // Private, server-only
     dashscopeApiKey: process.env.DASHSCOPE_API_KEY || process.env.NUXT_DASHSCOPE_API_KEY || '',
     dashscopeBaseUrl:
       process.env.DASHSCOPE_BASE_URL ||
@@ -26,6 +25,7 @@ export default defineNuxtConfig({
     dashscopeModel: process.env.DASHSCOPE_MODEL || process.env.NUXT_DASHSCOPE_MODEL || 'qwen-plus',
     maxInputChars: Number(process.env.MAX_INPUT_CHARS || 12000),
     rateLimitPerIpPerMin: Number(process.env.RATE_LIMIT_PER_IP_PER_MIN || 30),
+    databaseUrl: process.env.DATABASE_URL || '',
     public: {
       appName: process.env.APP_NAME || 'AI Chat Assistant',
     },

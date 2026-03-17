@@ -21,6 +21,8 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
 
    rateLimitPerIpPerMin: number,
 
+   databaseUrl: string,
+
    nitro: {
       envPrefix: string,
    },

@@ -10,15 +10,19 @@
     "lint": "eslint .",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "postinstall": "nuxt prepare"
+    "postinstall": "prisma generate && nuxt prepare",
+    "vercel-build": "cp prisma/schema.postgres.prisma prisma/schema.prisma && prisma generate && nuxt build"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@prisma/client": "^6.0.0",
+    "@prisma/adapter-pg": "^6.0.0",
     "nuxt": "^3.12.4",
-    "openai": "^4.0.0"
+    "openai": "^4.0.0",
+    "pg": "^8.13.0"
   },
   "devDependencies": {
+    "@types/pg": "^8.11.0",
     "prisma": "^6.0.0",
     "typescript": "^5.5.4",
     "vue-tsc": "^2.0.29"

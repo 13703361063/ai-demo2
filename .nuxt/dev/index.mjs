@@ -657,7 +657,8 @@ const _inlineRuntimeConfig = {
   "dashscopeBaseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
   "dashscopeModel": "qwen-plus",
   "maxInputChars": 12000,
-  "rateLimitPerIpPerMin": 30
+  "rateLimitPerIpPerMin": 30,
+  "databaseUrl": "file:./prisma/dev.db"
 };
 const envOptions = {
   prefix: "NITRO_",

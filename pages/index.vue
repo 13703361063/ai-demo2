@@ -335,10 +335,6 @@ onMounted(async () => {
     const saved = localStorage.getItem('theme')
     if (saved === 'light') {
       isDark.value = false
-    } else if (saved === 'dark') {
-      isDark.value = true
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      isDark.value = false
     }
   }
 })
