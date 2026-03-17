@@ -1,6 +1,6 @@
 ## AI Chat Assistant（Nuxt 3 + TypeScript + Tailwind CSS）
 
-一个企业级风格的 **AI 对话助手前后端一体项目**，基于 **Nuxt 3 + TypeScript + Tailwind CSS + Prisma + SQLite**，默认对接通义千问（DashScope）的 OpenAI 兼容接口，支持 **SSE 流式输出** 与会话持久化存储。
+一个企业级风格的 **AI 对话助手前后端一体项目**，基于 **Nuxt 3 + TypeScript + Tailwind CSS + Prisma + PostgreSQL (Supabase)**，默认对接通义千问（DashScope）的 OpenAI 兼容接口，支持 **SSE 流式输出** 与会话持久化存储。
 
 ### 功能特性
 
@@ -14,7 +14,7 @@
 
 - **会话管理与持久化**
   - 匿名 Session：通过 HttpOnly `sessionId` cookie 区分不同浏览器用户，无需登录。
-  - 使用 **Prisma + SQLite** 存储：
+  - 使用 **Prisma + PostgreSQL (Supabase)** 存储：
     - `Session`：会话归属
     - `Conversation`：对话（标题、时间等）
     - `Message`：消息内容（user/assistant）
@@ -42,7 +42,7 @@
 - 前端框架：**Nuxt 3**（Vue 3 + Vite）
 - 语言：**TypeScript**
 - 样式：**Tailwind CSS**
-- 数据库：**SQLite**
+- 数据库：**PostgreSQL (Supabase)**
 - ORM：**Prisma**
 - 大模型接口：默认 **通义千问 DashScope** 的 OpenAI 兼容 API（可切换至其他兼容端点）
 
@@ -65,13 +65,12 @@
 npm install
 ```
 
-2. 配置环境变量（复制 `.env.example` 为 `.env`，并填入 DashScope 相关配置）：
+2. 配置环境变量（复制 `.env.example` 为 `.env`，并填入以下配置）：
 
-```bash
-cp .env.example .env
-```
+   - **DashScope API Key**：获取自 [阿里云 DashScope 控制台](https://dashscope.console.aliyun.com/)
+   - **Supabase 数据库连接**：获取自 [Supabase 控制台](https://supabase.com/)
 
-3. 初始化数据库（已在当前仓库执行过，可按需重新执行）：
+3. 初始化数据库：
 
 ```bash
 npm run prisma:migrate
@@ -84,4 +83,23 @@ npm run dev
 ```
 
 打开浏览器访问 `http://localhost:3000` 即可体验一个带有 **流式输出、会话存储、快捷提问、暗/亮主题切换** 的完整 AI 对话助手。
+
+### 部署到 Vercel
+
+1. **创建 Supabase 项目**：
+   - 访问 [Supabase 控制台](https://supabase.com/)
+   - 创建新项目并获取数据库连接字符串
+
+2. **配置 Vercel 环境变量**：
+   - 在 Vercel 项目设置 → Environment Variables 中添加：
+     - `DATABASE_URL`：Supabase 连接池字符串
+     - `DIRECT_DATABASE_URL`：Supabase 直接连接字符串
+     - `DASHSCOPE_API_KEY`：你的 API 密钥
+
+3. **部署**：
+   - 推送代码到 GitHub 仓库
+   - 在 Vercel 中导入仓库并部署
+   - Vercel 会自动运行 `vercel-build` 脚本完成构建
+
+部署完成后，访问 Vercel 提供的域名即可使用在线版本。
 
