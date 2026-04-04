@@ -1,1 +1,10 @@
 node_modules
+.env
+.nuxt
+dist
+*.log
+.DS_Store
+*.db
+*.db-journal
+prisma/dev.db
+prisma/migrations
