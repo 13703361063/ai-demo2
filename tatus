@@ -1,0 +1,31 @@
+[33mcommit 701695582fc3f4df46e51bdb3c6f2286ad08df8d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: 13703361063 <2565678468@qq.com>
+Date:   Sat Apr 4 12:44:29 2026 +0800
+
+    大模型修改为智普清言
+
+ .env                                               |  14 [32m++[m[31m-[m
+ .env.example                                       |   8 [32m+[m[31m-[m
+ .nuxt/dev/index.mjs                                | 130 [32m++++++++++[m[31m-----------[m
+ .nuxt/dev/index.mjs.map                            |   2 [32m+[m[31m-[m
+ .nuxt/dist/server/client.manifest.mjs              |   2 [32m+[m[31m-[m
+ .nuxt/dist/server/runner.mjs                       |   2 [32m+[m[31m-[m
+ .nuxt/dist/server/server.mjs                       |   2 [32m+[m[31m-[m
+ .nuxt/manifest/latest.json                         |   2 [32m+[m[31m-[m
+ .../meta/3d260e90-ad1f-4ac6-bd99-ab8bd4401c3e.json |   1 [31m-[m
+ .nuxt/manifest/meta/dev.json                       |   2 [32m+[m[31m-[m
+ .nuxt/nitro.json                                   |   6 [32m+[m[31m-[m
+ .nuxt/nuxt.d.ts                                    |   2 [32m+[m[31m-[m
+ .nuxt/nuxt.json                                    |   4 [32m+[m[31m-[m
+ .nuxt/tailwind/postcss.mjs                         |   4 [32m+[m[31m-[m
+ .nuxt/tsconfig.json                                |   2 [32m+[m[31m-[m
+ .nuxt/tsconfig.server.json                         |   2 [32m+[m[31m-[m
+ .nuxt/types/build.d.ts                             |   2 [32m+[m[31m-[m
+ .nuxt/types/nitro-imports.d.ts                     |   8 [32m+[m[31m-[m
+ nuxt.config.ts                                     |   4 [32m+[m[31m-[m
+ prisma/dev.db                                      |   0
+ .../migrations/20260317070652_init/migration.sql   |  42 [31m-------[m
+ prisma/migrations/migration_lock.toml              |   3 [31m-[m
+ prisma/prisma/dev.db                               | Bin [31m45056[m -> [32m45056[m bytes
+ prisma/schema.prisma                               |   5 [32m+[m[31m-[m
+ 24 files changed, 103 insertions(+), 146 deletions(-)
