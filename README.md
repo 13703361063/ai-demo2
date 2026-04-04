@@ -1,4 +1,7 @@
+
 ## AI Chat Assistant（Nuxt 3 + TypeScript + Tailwind CSS）
+
+![](F:\demo-xcx\ai-chat-assistant\img.png)
 
 一个企业级风格的 **AI 对话助手前后端一体项目**，基于 **Nuxt 3 + TypeScript + Tailwind CSS + Prisma + PostgreSQL (Supabase)**，默认对接通义千问（DashScope）的 OpenAI 兼容接口，支持 **SSE 流式输出** 与会话持久化存储。
 
