@@ -3,43 +3,43 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getCookie, setCookie, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, setHeader, sendStream, getResponseStatusText } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/@vue/shared/dist/shared.cjs.js';
-import OpenAI from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/openai/index.mjs';
-import { PrismaClient } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/@prisma/client/default.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/devalue/index.js';
-import { isVNode, isRef, toValue } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getCookie, setCookie, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, setHeader, sendStream, getResponseStatusText } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/@vue/shared/dist/shared.cjs.js';
+import OpenAI from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/openai/index.mjs';
+import { PrismaClient } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/@prisma/client/default.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/devalue/index.js';
+import { isVNode, isRef, toValue } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/errx/dist/index.js';
-import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
+import { getContext } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/errx/dist/index.js';
+import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1 } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://F:/xcx-demo/ai-chat-assistant/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$1 } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/pathe/dist/index.mjs';
+import { walkResolver } from 'file://F:/demo-xcx/ai-chat-assistant/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"F:/xcx-demo/ai-chat-assistant/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"F:/demo-xcx/ai-chat-assistant/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -51,11 +51,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"F:/xcx-demo/ai-chat-assistant","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"F:/xcx-demo/ai-chat-assistant/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"F:/xcx-demo/ai-chat-assistant/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"F:/xcx-demo/ai-chat-assistant/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"F:/xcx-demo/ai-chat-assistant/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"F:/demo-xcx/ai-chat-assistant","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"F:/demo-xcx/ai-chat-assistant/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"F:/demo-xcx/ai-chat-assistant/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"F:/demo-xcx/ai-chat-assistant/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"F:/demo-xcx/ai-chat-assistant/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -653,12 +653,12 @@ const _inlineRuntimeConfig = {
   "public": {
     "appName": "AI Chat Assistant"
   },
-  "dashscopeApiKey": "sk-0d78827015574e3893c15a112eb00cf9",
-  "dashscopeBaseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-  "dashscopeModel": "qwen-plus",
+  "dashscopeApiKey": "9946c2bb757e4e90a3adbc2ec7e516fd.JsC5gyhXCcgRWbC0",
+  "dashscopeBaseUrl": "https://open.bigmodel.cn/api/paas/v4",
+  "dashscopeModel": "glm-4",
   "maxInputChars": 12000,
   "rateLimitPerIpPerMin": 30,
-  "databaseUrl": "postgres://postgres.hedvegnbcriepjnfayjx:CCGtLznRuPjyYmFU@aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true"
+  "databaseUrl": "file:./prisma/dev.db"
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -2031,13 +2031,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _J16wh9FI7S9e2P5QKd5Bn7twqvuMUtIlZXKmK6G36g = (function(nitro) {
+const _fAZ6E0j5r5DqvmpINm4LwbNgAebOLz5BYWczdIcTYws = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "F:/xcx-demo/ai-chat-assistant";
+const rootDir = "F:/demo-xcx/ai-chat-assistant";
 
 const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[],"style":[],"script":[],"noscript":[],"title":"AI Chat Assistant"};
 
@@ -2062,7 +2062,7 @@ const asyncContext = getContext("nuxt-dev", {
 	asyncContext: true,
 	AsyncLocalStorage
 });
-const _tgZcMV3OP9ap57mxXHHaYh__Sh8lZDzalVqM5gnhoV0 = (nitroApp) => {
+const _IwiqyqHHCZ0sjZ2wD8HpIUDCO0NXzbGl0ebc9eizxTM = (nitroApp) => {
 	const handler = nitroApp.h3App.handler;
 	nitroApp.h3App.handler = (event) => {
 		return asyncContext.callAsync({
@@ -2136,8 +2136,8 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _J16wh9FI7S9e2P5QKd5Bn7twqvuMUtIlZXKmK6G36g,
-_tgZcMV3OP9ap57mxXHHaYh__Sh8lZDzalVqM5gnhoV0,
+  _fAZ6E0j5r5DqvmpINm4LwbNgAebOLz5BYWczdIcTYws,
+_IwiqyqHHCZ0sjZ2wD8HpIUDCO0NXzbGl0ebc9eizxTM,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
@@ -2166,7 +2166,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _8xVk7B = eventHandler((event) => {
+const _A8Qyas = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -2234,7 +2234,7 @@ const COOKIE_NAME$1 = "sessionId";
 function createSessionId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
-const _NjmTL7 = defineEventHandler((event) => {
+const _J1fZEM = defineEventHandler((event) => {
   const existing = getCookie(event, COOKIE_NAME$1);
   if (existing) return;
   const id = createSessionId();
@@ -2326,9 +2326,9 @@ function publicAssetsURL(...path) {
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
 // @ts-expect-error file will be produced after app build
-const getServerEntry = () => import('file://F:/xcx-demo/ai-chat-assistant/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file://F:/demo-xcx/ai-chat-assistant/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
 // @ts-expect-error file will be produced after app build
-const getClientManifest = () => import('file://F:/xcx-demo/ai-chat-assistant/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file://F:/demo-xcx/ai-chat-assistant/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 // -- SSR Renderer --
 const getSSRRenderer = lazyCachedFunction(async () => {
 	// Load server bundle
@@ -2619,24 +2619,24 @@ async function getIslandContext(event) {
 	};
 }
 
-const _lazy_q1cPGg = () => Promise.resolve().then(function () { return chat_post$1; });
-const _lazy_WaQXkR = () => Promise.resolve().then(function () { return conversations_get$1; });
-const _lazy_2iCcUG = () => Promise.resolve().then(function () { return conversations_post$1; });
-const _lazy_Es4RXm = () => Promise.resolve().then(function () { return _id__delete$1; });
-const _lazy_ZAj_1K = () => Promise.resolve().then(function () { return messages_get$1; });
-const _lazy_bSsg9U = () => Promise.resolve().then(function () { return renderer; });
+const _lazy_tVpK_V = () => Promise.resolve().then(function () { return chat_post$1; });
+const _lazy_p6wKHH = () => Promise.resolve().then(function () { return conversations_get$1; });
+const _lazy_vHaBMM = () => Promise.resolve().then(function () { return conversations_post$1; });
+const _lazy_97QjRC = () => Promise.resolve().then(function () { return _id__delete$1; });
+const _lazy_0hD9LV = () => Promise.resolve().then(function () { return messages_get$1; });
+const _lazy_Rfrgjy = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
-  { route: '', handler: _8xVk7B, lazy: false, middleware: true, method: undefined },
-  { route: '', handler: _NjmTL7, lazy: false, middleware: true, method: undefined },
-  { route: '/api/chat', handler: _lazy_q1cPGg, lazy: true, middleware: false, method: "post" },
-  { route: '/api/conversations', handler: _lazy_WaQXkR, lazy: true, middleware: false, method: "get" },
-  { route: '/api/conversations', handler: _lazy_2iCcUG, lazy: true, middleware: false, method: "post" },
-  { route: '/api/conversations/:id', handler: _lazy_Es4RXm, lazy: true, middleware: false, method: "delete" },
-  { route: '/api/conversations/:id/messages', handler: _lazy_ZAj_1K, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_bSsg9U, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _A8Qyas, lazy: false, middleware: true, method: undefined },
+  { route: '', handler: _J1fZEM, lazy: false, middleware: true, method: undefined },
+  { route: '/api/chat', handler: _lazy_tVpK_V, lazy: true, middleware: false, method: "post" },
+  { route: '/api/conversations', handler: _lazy_p6wKHH, lazy: true, middleware: false, method: "get" },
+  { route: '/api/conversations', handler: _lazy_vHaBMM, lazy: true, middleware: false, method: "post" },
+  { route: '/api/conversations/:id', handler: _lazy_97QjRC, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/conversations/:id/messages', handler: _lazy_0hD9LV, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_Rfrgjy, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_bSsg9U, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_Rfrgjy, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

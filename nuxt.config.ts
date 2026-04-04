@@ -21,8 +21,8 @@ export default defineNuxtConfig({
     dashscopeBaseUrl:
       process.env.DASHSCOPE_BASE_URL ||
       process.env.NUXT_DASHSCOPE_BASE_URL ||
-      'https://dashscope.aliyuncs.com/compatible-mode/v1',
-    dashscopeModel: process.env.DASHSCOPE_MODEL || process.env.NUXT_DASHSCOPE_MODEL || 'qwen-plus',
+      'https://open.bigmodel.cn/api/paas/v4/chat/completions',
+    dashscopeModel: process.env.DASHSCOPE_MODEL || process.env.NUXT_DASHSCOPE_MODEL || 'glm-4',
     maxInputChars: Number(process.env.MAX_INPUT_CHARS || 12000),
     rateLimitPerIpPerMin: Number(process.env.RATE_LIMIT_PER_IP_PER_MIN || 30),
     databaseUrl: process.env.DATABASE_URL || '',

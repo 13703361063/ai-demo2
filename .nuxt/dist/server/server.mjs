@@ -1,1 +1,1 @@
-export { default } from "file:///F:/xcx-demo/ai-chat-assistant/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"
+export { default } from "file:///F:/demo-xcx/ai-chat-assistant/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"
